@@ -7,9 +7,7 @@ export const registerUserFormSchema = z.object({
     firstName: z.string().min(1, "Primeiro nome é obrigatório"),
     lastName: z.string().min(1, "Último nome é obrigatório"),
 
-    email: z
-        .email("Email inválido")
-        .min(1, "E-mail é obrigatório"),
+    email: z.email("Email inválido"),
 
     password: z
         .string()
@@ -33,12 +31,12 @@ export const registerUserFormSchema = z.object({
 })
 .refine((data) => data.password === data.confirmPassword, {
     message: "As senhas não coincidem",
-    path: ["ConfirmPassword"],
+    path: ["confirmPassword"],
 });
 
 type RegisterFormData = z.infer<typeof registerUserFormSchema>
 
-export function RegisterForm(){
+export const useRegisterForm = () => {
     const {
         register,
         handleSubmit,
