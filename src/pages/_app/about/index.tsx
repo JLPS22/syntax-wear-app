@@ -18,7 +18,7 @@ function RouteComponent() {
                 Somos apaixonados por calçados que unem estilo, conforto e durabilidade. Nossa missão? Fazer você se sentir bem a cada passo, oferencendo uma experiência de compra incrível e uma seleção de tênis, botas e sapatos para todas as ocasiões.
             </p>
 
-            <Link to="/our-stores" className='self-start text-xs font-bold text-[#333333] uppercase border-b-2 tracking-[2.5px] hover:text-accent transition-colors duration-500'>Saiba mais sobre nossas lojas</Link>
+            <Link to="/our-stores" className='self-start text-xs font-bold text-[#333333] uppercase border-b-2 tracking-[2.5px] hover:text-accent transition-colors duration-500 pt-6'>Saiba mais sobre nossas lojas</Link>
         </div>
     </section>
 }
